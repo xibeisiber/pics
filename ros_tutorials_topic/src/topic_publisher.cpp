@@ -13,11 +13,9 @@ int main(int argc, char** argv)  // Node Main Function
 
     // Set the loop period. '10' refers to 10 Hz and the main loop repeats at 0.1 second intervals
     ros::Rate loop_rate(25);
-
-    geometry_msgs::PoseArray msg;  // Declares message 'msg' in 'MsgTutorial' message file format
     int count = 0;                 // Variable to be used in message
-
     while (ros::ok()) {
+        geometry_msgs::PoseArray msg;  // Declares message 'msg' in 'MsgTutorial' message file format
         msg.header.stamp = ros::Time::now();  // Save current time in the stamp of 'msg'
         for (unsigned int i = 0; i < 40; i++) {
             geometry_msgs::Pose pose;
